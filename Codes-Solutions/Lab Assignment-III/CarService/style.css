@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("BG.jpg");
+    background-size: cover;
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header img {
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+}
+
+.header h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    margin: 0;
+}
+
+.tab {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: outset;
+    border-radius: 20px;
+    box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.75);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-left: 15px;
+    padding-bottom: 12px;
+    background-color: rgba(255, 255, 255, 0.3); /* Set background color to white with transparency */
+    width: 400px; /* Add width for centering */
+    height: auto; /* Adjust height as needed */
+}
+
+td {
+    border: 1;
+}
+
