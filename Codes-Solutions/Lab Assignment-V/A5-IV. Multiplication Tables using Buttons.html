@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiplication Tables Using Buttons</title>
+<h1>Multiplication Table</Table></h1>
+<style>
+    .table-container {
+        margin-top: 60px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+</style>
+</head>
+<body>
+    <h2>Click on a number to display the table:-</h2>
+    <button onclick="displayMultiplicationTable(11)">11</button>
+    <button onclick="displayMultiplicationTable(13)">13</button>
+    <button onclick="displayMultiplicationTable(15)">15</button>
+
+    <div class="table-container" id="table-container"></div>
+
+    <script>
+        function displayMultiplicationTable(number) {
+            let table = '<h3> Table of ' + number + '</h3>';
+            table += '<table border="1">';
+            for (let i = 1; i <= 10; i++) {
+                table += '<tr><td>' + number + ' &times; ' + i + '</td><td>' + (number * i) + '</td></tr>';
+            }
+            table += '</table>';
+
+            document.getElementById('table-container').innerHTML = table;
+        }
+    </script>
+</body>
+</html>
