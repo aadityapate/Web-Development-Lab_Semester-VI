@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Append Row to Table</title>
+</head>
+<body>
+    <h1>Append Row to Table</h1>
+    <button onclick="appendRow()">Add Row</button>
+    <br><br>
+    <table id="myTable" border="5">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+        function appendRow() {
+
+            var tableBody = document.querySelector("#myTable tbody");
+
+            var newRow = document.createElement("tr");
+
+            var cell1 = document.createElement("td");
+            cell1.textContent = "Cell 1";
+            newRow.appendChild(cell1);
+
+            var cell2 = document.createElement("td");
+            cell2.textContent = "Cell 2";
+            newRow.appendChild(cell2);
+
+            var cell3 = document.createElement("td");
+            cell3.textContent = "Cell 3";
+            newRow.appendChild(cell3);
+
+            tableBody.appendChild(newRow);
+        }
+    </script>
+</body>
+</html>

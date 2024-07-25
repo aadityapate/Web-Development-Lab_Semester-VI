@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Background Color</title>
+
+<style>
+  li {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    list-style: none;
+    display: inline-block;
+    background-color: grey; 
+  }
+</style>
+</head>
+
+<body>
+<h2>Click on a color to change the background</h2>
+<ul id="colorList">
+</ul>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var colors = ['Red', 'Green', 'Blue'];
+  var colorList = document.getElementById('colorList');
+  colors.forEach(function(color) {
+    var listItem = document.createElement('li');
+    listItem.textContent = color;
+
+    listItem.addEventListener('click', function() {
+      listItem.style.backgroundColor = color;
+
+      var allListItems = document.querySelectorAll('#colorList li');
+      allListItems.forEach(function(item) {
+        if (item !== listItem) {
+          item.style.backgroundColor = 'grey';
+        }
+      });
+      document.body.style.backgroundColor = color;
+    });
+
+    colorList.appendChild(listItem);
+  });
+});
+</script>
+
+</body>
+</html>

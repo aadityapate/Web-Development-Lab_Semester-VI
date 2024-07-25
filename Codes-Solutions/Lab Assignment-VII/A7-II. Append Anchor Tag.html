@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Append Anchor Tag</title>
+</head>
+<body>
+    <h1>Append Anchor Tag</h1>
+    <button onclick="appendAnchor()">Add Anchor Tag</button>
+
+    <script>
+        function appendAnchor() {
+
+            var anchor = document.createElement("a");
+
+            anchor.href = "https://earth.google.com/web/?authuser=0";
+
+            anchor.textContent = "Click here to go to the new page";
+
+            document.body.appendChild(anchor);
+        }
+    </script>
+</body>
+</html>
