@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #ebfffd;
+    padding-top: 80px; /* Adjust padding to avoid content overlap with fixed navbar */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ebfffd;
+    align-items: center;
+    box-shadow: 0 2px 5px black;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 20px; /* Add padding for better spacing */
+}
+
+.navbar .logo {
+    padding: 20px;
+    color: #4c5b59;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.navbar .bartext {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.navbar .bartext a {
+    margin: 0 10px;
+    text-decoration: none;
+    padding: 5px;
+    color: black;
+}
+
+.loginbutton {
+    background-color: #4c5b59;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menucontainer {
+    margin: 0 100px;
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    border-spacing: 20px;
+}
+
+td {
+    padding: 5px;
+    border: 2px solid #4c5b59;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu {
+    margin: 50px 0 40px;
+    font-size: 35px;
+    color: #4c5b59;
+    text-decoration: underline;
+}
+
+.flowerbutton {
+    background-color: #4c5b59;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+.zoom img {
+    transition: 0.3s all ease-in-out;
+    height: 225px;
+    width: 250px;
+}
+
+.zoom:hover img {
+    transform: scale(1.09);
+}
+
+#contact {
+    margin-top: 50px;
+    background-color: #4c5b59;
+    padding: 25px;
+    color: white;
+    text-align: center;
+}
