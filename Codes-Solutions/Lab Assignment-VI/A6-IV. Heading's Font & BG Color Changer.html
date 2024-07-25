@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Font and Background Color Changer</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    #heading {
+        font-size: 24px;
+        padding: 20px;
+    }
+</style>
+</head>
+<body>
+    <h1 id="heading">Heading to Change</h1>
+    <label for="fontColor">Select Font Color:</label>
+    <select id="fontColor">
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+        <option value="orange">Orange</option>
+        <option value="purple">Purple</option>
+    </select>
+    <br><br>
+    <label for="bgColor">Select Background Color:</label>
+    <select id="bgColor">
+        <option value="white">White</option>
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+        <option value="orange">Orange</option>
+        <option value="purple">Purple</option>
+    </select>
+
+    <script>
+        const heading = document.getElementById('heading');
+        const fontColorSelect = document.getElementById('fontColor');
+        const bgColorSelect = document.getElementById('bgColor');
+
+        function changeHeadingStyle() {
+            const fontColor = fontColorSelect.value;
+            const bgColor = bgColorSelect.value;
+
+            if (fontColor !== bgColor) {
+                heading.style.color = fontColor;
+                heading.style.backgroundColor = bgColor;
+            } else {
+                // If font color and background color are same, revert to default
+                heading.style.color = '';
+                heading.style.backgroundColor = '';
+            }
+        }
+
+        fontColorSelect.addEventListener('change', changeHeadingStyle);
+        bgColorSelect.addEventListener('change', changeHeadingStyle);
+    </script>
+</body>
+</html>

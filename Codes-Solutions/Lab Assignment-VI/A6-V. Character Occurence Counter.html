@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Character Occurrences Counter</title>
+</head>
+<body>
+    <h1>Character Occurrences Counter</h1>
+    <p>Enter a character and click the button to see its occurrences in the array.</p>
+    <label for="characterInput">Character:</label>
+    <input type="text" id="characterInput">
+    <button onclick="countOccurrences()">Count Occurrences</button>
+    <p id="result"></p>
+
+    <script>
+        function countOccurrences() {
+            const arr = ['a', 'b', 'a', 'c', 'z'];
+            const characterToFind = document.getElementById('characterInput').value;
+            let count = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] === characterToFind) {
+                    count++;
+                }
+            }
+
+            const resultElement = document.getElementById('result');
+            resultElement.textContent = `Occurrences of ${characterToFind} is ${count}`;
+        }
+    </script>
+</body>
+</html>
